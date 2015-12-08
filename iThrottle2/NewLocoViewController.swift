@@ -36,14 +36,16 @@ class NewLocoViewController: UIViewController,UINavigationControllerDelegate, UI
     @IBOutlet weak var busText: UITextField!
     @IBOutlet weak var takePictureBtn: UIButton!
     
+    @IBOutlet weak var saveBtn: UIBarButtonItem!
     @IBOutlet weak var navigationBar: UINavigationBar!
     
+    @IBOutlet weak var cancelBtn: UIBarButtonItem!
     @IBAction func takePictureBtn(sender: AnyObject) {
         
        
         imagePicker =  UIImagePickerController()
         imagePicker.delegate = self
-        imagePicker.sourceType = .Camera
+        imagePicker.sourceType = .PhotoLibrary
         
         presentViewController(imagePicker, animated: true, completion: nil)
         
@@ -118,26 +120,31 @@ class NewLocoViewController: UIViewController,UINavigationControllerDelegate, UI
         self.navigationBar.translucent = true
         
         
-        self.takePicBtn.backgroundColor = imgColors[4]
+        /*self.takePicBtn.tintColor = imgColors[4]
         self.takePicBtn.layer.cornerRadius = 5
-        self.takePicBtn.tintColor = ContrastColorOf( self.takePicBtn.backgroundColor! , returnFlat: true)
-        
+        self.takePicBtn.backgroundColor = ContrastColorOf(  avgColor , returnFlat: true)
+        */
         self.busLabel.textColor = contrastColor
         self.nameLabel.textColor = contrastColor
         self.speedLabel.textColor = contrastColor
         self.addressLabel.textColor = contrastColor
         
+        self.cancelBtn.tintColor = imgColors[4]
+        self.saveBtn.tintColor = imgColors[4]
         
+        let picBtnImg = UIImage (named: "pictBtn")?.imageWithRenderingMode(.AlwaysTemplate)
+        self.takePicBtn.setImage(picBtnImg , forState: .Normal)
+        self.takePicBtn.tintColor = imgColors[4]
         
-        self.setThemeUsingPrimaryColor(contrastColor, withContentStyle: UIContentStyle.Contrast)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        addGradient()
         
         
     }
     
-    
     func addGradient(){
-        
-        
         
         
         let gradientLayer = CAGradientLayer()
@@ -166,7 +173,9 @@ class NewLocoViewController: UIViewController,UINavigationControllerDelegate, UI
         self.speedText.delegate = self;
         self.busText.delegate = self;
         self.nameText.delegate = self;
+        self.styleView()
         
+
     }
     
     

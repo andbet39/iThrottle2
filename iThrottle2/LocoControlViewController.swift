@@ -246,8 +246,10 @@ class LocoControlViewController: UIViewController {
     override func viewWillDisappear(animated: Bool) {
         timer!.invalidate()
         self.navigationController?.navigationBar.tintColor = originalBarColor
-
         
+        self.navigationController!.navigationBar.setBackgroundImage(nil, forBarMetrics: UIBarMetrics.Default)
+        self.navigationController!.navigationBar.shadowImage = nil //UIImage()
+        self.navigationController!.navigationBar.translucent = true
     }
     
     @IBAction func speedSliderChanged(sender: AnyObject) {
