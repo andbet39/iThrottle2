@@ -20,6 +20,9 @@
 		B534EE4C1C155AEA00E1F98A /* base.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B534EE4B1C155AEA00E1F98A /* base.jpg */; };
 		B534EE4E1C1615EC00E1F98A /* Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = B534EE4D1C1615EC00E1F98A /* Function.swift */; };
 		B534EE531C16B6DB00E1F98A /* NewLocoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B534EE521C16B6DB00E1F98A /* NewLocoViewController.swift */; };
+		B534EE571C17468100E1F98A /* backBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = B534EE541C17468100E1F98A /* backBtn.png */; };
+		B534EE581C17468100E1F98A /* backBtn2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B534EE551C17468100E1F98A /* backBtn2x.png */; };
+		B534EE591C17468100E1F98A /* backBtn3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B534EE561C17468100E1F98A /* backBtn3x.png */; };
 		B53D187C1C0E3D4200D2A5CB /* LocoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53D187B1C0E3D4200D2A5CB /* LocoManager.swift */; };
 		B557068D1C0DB69F00981258 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B557068C1C0DB69F00981258 /* AppDelegate.swift */; };
 		B557068F1C0DB69F00981258 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B557068E1C0DB69F00981258 /* ViewController.swift */; };
@@ -119,6 +122,9 @@
 		B534EE4B1C155AEA00E1F98A /* base.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = base.jpg; sourceTree = "<group>"; };
 		B534EE4D1C1615EC00E1F98A /* Function.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Function.swift; sourceTree = "<group>"; };
 		B534EE521C16B6DB00E1F98A /* NewLocoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewLocoViewController.swift; sourceTree = "<group>"; };
+		B534EE541C17468100E1F98A /* backBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backBtn.png; sourceTree = "<group>"; };
+		B534EE551C17468100E1F98A /* backBtn2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backBtn2x.png; sourceTree = "<group>"; };
+		B534EE561C17468100E1F98A /* backBtn3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backBtn3x.png; sourceTree = "<group>"; };
 		B53D187B1C0E3D4200D2A5CB /* LocoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocoManager.swift; path = ../LocoManager.swift; sourceTree = "<group>"; };
 		B55706891C0DB69F00981258 /* iThrottle2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iThrottle2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B557068C1C0DB69F00981258 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -335,6 +341,9 @@
 		B5C0FC371C142365009575F1 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				B534EE541C17468100E1F98A /* backBtn.png */,
+				B534EE551C17468100E1F98A /* backBtn2x.png */,
+				B534EE561C17468100E1F98A /* backBtn3x.png */,
 				B534EE4B1C155AEA00E1F98A /* base.jpg */,
 				B534EE491C15592700E1F98A /* bse.jpg */,
 				B534EE451C1454B700E1F98A /* CSX.jpg */,
@@ -506,13 +515,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B534EE591C17468100E1F98A /* backBtn3x.png in Resources */,
 				B5C0FC361C142360009575F1 /* 222.jpg in Resources */,
 				B55706971C0DB69F00981258 /* LaunchScreen.storyboard in Resources */,
 				B534EE421C1434D200E1F98A /* 636.JPG in Resources */,
+				B534EE581C17468100E1F98A /* backBtn2x.png in Resources */,
 				B55706941C0DB69F00981258 /* Assets.xcassets in Resources */,
 				B534EE4C1C155AEA00E1F98A /* base.jpg in Resources */,
 				B534EE471C1454B700E1F98A /* CSX.jpg in Resources */,
 				B534EE481C1454B700E1F98A /* FS.JPG in Resources */,
+				B534EE571C17468100E1F98A /* backBtn.png in Resources */,
 				B55706921C0DB69F00981258 /* Main.storyboard in Resources */,
 				B534EE4A1C15592700E1F98A /* bse.jpg in Resources */,
 			);

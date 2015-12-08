@@ -55,12 +55,11 @@ class LocoControlViewController: UIViewController {
     var locoImage:UIImage!
     
     var btnBaseColor:UIColor?
-    
+    var originalBarColor:UIColor?
     
     
     func styleView(){
         
-    
         
         
         let avgColor = UIColor(averageColorFromImage: mainImg.image)
@@ -72,15 +71,22 @@ class LocoControlViewController: UIViewController {
         let contrastColor  = ContrastColorOf( self.view.backgroundColor! , returnFlat: isFLAT)
 
         self.locoNameLabel.textColor = contrastColor
-        
-        self.navigationController?.navigationBar.tintColor = contrastColor
+        originalBarColor = self.navigationController?.navigationBar.tintColor
+      
         self.navigationController!.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navigationController!.navigationBar.shadowImage = UIImage()
         self.navigationController!.navigationBar.translucent = true
         self.navigationController!.view.backgroundColor = UIColor.clearColor()
-        
         self.navigationController?.navigationBar.tintColor = imgColors[4]
-            
+        
+        
+        let inset = UIEdgeInsets(top: 0,left: 0,bottom: 0,right: 0)
+        let backBtnImg = UIImage(named: "backBtn")?.imageWithAlignmentRectInsets(inset)
+        
+        navigationController?.navigationBar.backIndicatorImage = backBtnImg
+        navigationController?.navigationBar.backIndicatorTransitionMaskImage = backBtnImg
+        self.navigationController?.navigationBar.topItem!.title = "";
+        
         self.speedSlider.thumbTintColor = imgColors[4]
         
         self.speedSlider.tintColor = contrastColor
@@ -171,9 +177,12 @@ class LocoControlViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         addGradient()
+       
 
     }
     override func viewDidLayoutSubviews() {
+        
+        
     }
     
     override func viewDidLoad() {
@@ -236,6 +245,8 @@ class LocoControlViewController: UIViewController {
     
     override func viewWillDisappear(animated: Bool) {
         timer!.invalidate()
+        self.navigationController?.navigationBar.tintColor = originalBarColor
+
         
     }
     

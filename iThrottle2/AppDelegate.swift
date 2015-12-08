@@ -23,8 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,WCSessionDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        
-      //  Chameleon.setGlobalThemeUsingPrimaryColor(FlatRed(), withContentStyle: UIContentStyle.Contrast)
+
         
         if (WCSession.isSupported()) {
             let session = WCSession.defaultSession()

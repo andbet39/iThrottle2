@@ -21,6 +21,11 @@ class ViewController: UITableViewController,NewLocoViewControllerDelegate{
         self.title = "Locomotives"
         
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBar.topItem!.title = "Locomotives";
+
+    }
 
     @IBAction func connectButton(sender: AnyObject) {
         
