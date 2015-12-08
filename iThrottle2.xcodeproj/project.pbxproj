@@ -1,0 +1,990 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7100E2F85DD5930E5519A88F /* Pods_iThrottle2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B397A3EE84133BB5820965D /* Pods_iThrottle2.framework */; };
+		B52651D31C12D03C00890365 /* ysocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52651D01C12D03C00890365 /* ysocket.swift */; };
+		B52651D41C12D03C00890365 /* ytcpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = B52651D11C12D03C00890365 /* ytcpsocket.c */; };
+		B52651D51C12D03C00890365 /* ytcpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52651D21C12D03C00890365 /* ytcpsocket.swift */; };
+		B52651D71C13436C00890365 /* LocoControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52651D61C13436C00890365 /* LocoControlViewController.swift */; };
+		B534EE421C1434D200E1F98A /* 636.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B534EE411C1434D200E1F98A /* 636.JPG */; };
+		B534EE441C143F2500E1F98A /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B534EE431C143F2500E1F98A /* Extension.swift */; };
+		B534EE471C1454B700E1F98A /* CSX.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B534EE451C1454B700E1F98A /* CSX.jpg */; };
+		B534EE481C1454B700E1F98A /* FS.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B534EE461C1454B700E1F98A /* FS.JPG */; };
+		B534EE4A1C15592700E1F98A /* bse.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B534EE491C15592700E1F98A /* bse.jpg */; };
+		B534EE4C1C155AEA00E1F98A /* base.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B534EE4B1C155AEA00E1F98A /* base.jpg */; };
+		B534EE4E1C1615EC00E1F98A /* Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = B534EE4D1C1615EC00E1F98A /* Function.swift */; };
+		B534EE531C16B6DB00E1F98A /* NewLocoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B534EE521C16B6DB00E1F98A /* NewLocoViewController.swift */; };
+		B53D187C1C0E3D4200D2A5CB /* LocoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53D187B1C0E3D4200D2A5CB /* LocoManager.swift */; };
+		B557068D1C0DB69F00981258 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B557068C1C0DB69F00981258 /* AppDelegate.swift */; };
+		B557068F1C0DB69F00981258 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B557068E1C0DB69F00981258 /* ViewController.swift */; };
+		B55706921C0DB69F00981258 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B55706901C0DB69F00981258 /* Main.storyboard */; };
+		B55706941C0DB69F00981258 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B55706931C0DB69F00981258 /* Assets.xcassets */; };
+		B55706971C0DB69F00981258 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B55706951C0DB69F00981258 /* LaunchScreen.storyboard */; };
+		B55706A21C0DB6A000981258 /* iThrottle2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55706A11C0DB6A000981258 /* iThrottle2Tests.swift */; };
+		B55706AD1C0DB6A000981258 /* iThrottle2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55706AC1C0DB6A000981258 /* iThrottle2UITests.swift */; };
+		B55706B21C0DB6A000981258 /* iThrottle2 WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = B55706B11C0DB6A000981258 /* iThrottle2 WatchKit App.app */; };
+		B55706B81C0DB6A000981258 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B55706B61C0DB6A000981258 /* Interface.storyboard */; };
+		B55706BA1C0DB6A000981258 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B55706B91C0DB6A000981258 /* Assets.xcassets */; };
+		B55706C11C0DB6A000981258 /* iThrottle2 WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B55706C01C0DB6A000981258 /* iThrottle2 WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B55706C81C0DB6A000981258 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55706C71C0DB6A000981258 /* InterfaceController.swift */; };
+		B55706CA1C0DB6A000981258 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55706C91C0DB6A000981258 /* ExtensionDelegate.swift */; };
+		B55706CC1C0DB6A000981258 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55706CB1C0DB6A000981258 /* NotificationController.swift */; };
+		B55706CE1C0DB6A000981258 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B55706CD1C0DB6A000981258 /* Assets.xcassets */; };
+		B55706E51C0DB88700981258 /* LocoInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55706E31C0DB6E300981258 /* LocoInterfaceController.swift */; };
+		B55706EA1C0DDC8C00981258 /* LocoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55706E91C0DDC8C00981258 /* LocoRow.swift */; };
+		B55706EC1C0DDD4E00981258 /* LocoListInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55706EB1C0DDD4E00981258 /* LocoListInterfaceController.swift */; };
+		B55706F01C0E213200981258 /* LocoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55706EF1C0E213200981258 /* LocoViewCell.swift */; };
+		B55706F21C0E232100981258 /* Loco.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55706F11C0E232100981258 /* Loco.swift */; };
+		B5C0FC361C142360009575F1 /* 222.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B5C0FC351C142360009575F1 /* 222.jpg */; };
+		B5EA54D41C136ED900A841BA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EA54D31C136ED900A841BA /* NetworkManager.swift */; };
+		B5EA54D61C1379FC00A841BA /* SRCPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EA54D51C1379FC00A841BA /* SRCPManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B557069E1C0DB6A000981258 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B55706811C0DB69F00981258 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B55706881C0DB69F00981258;
+			remoteInfo = iThrottle2;
+		};
+		B55706A91C0DB6A000981258 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B55706811C0DB69F00981258 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B55706881C0DB69F00981258;
+			remoteInfo = iThrottle2;
+		};
+		B55706B31C0DB6A000981258 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B55706811C0DB69F00981258 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B55706B01C0DB6A000981258;
+			remoteInfo = "iThrottle2 WatchKit App";
+		};
+		B55706C21C0DB6A000981258 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B55706811C0DB69F00981258 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B55706BF1C0DB6A000981258;
+			remoteInfo = "iThrottle2 WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B55706D51C0DB6A000981258 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B55706C11C0DB6A000981258 /* iThrottle2 WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B55706D91C0DB6A000981258 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				B55706B21C0DB6A000981258 /* iThrottle2 WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1B397A3EE84133BB5820965D /* Pods_iThrottle2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iThrottle2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47A3346ACB7F87228E693DFC /* Pods-iThrottle2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iThrottle2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iThrottle2/Pods-iThrottle2.debug.xcconfig"; sourceTree = "<group>"; };
+		54DAECE9F155C290B5D0FC2D /* Pods-iThrottle2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iThrottle2.release.xcconfig"; path = "Pods/Target Support Files/Pods-iThrottle2/Pods-iThrottle2.release.xcconfig"; sourceTree = "<group>"; };
+		B52651CF1C12D03B00890365 /* iThrottle2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iThrottle2-Bridging-Header.h"; sourceTree = "<group>"; };
+		B52651D01C12D03C00890365 /* ysocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ysocket.swift; sourceTree = "<group>"; };
+		B52651D11C12D03C00890365 /* ytcpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ytcpsocket.c; sourceTree = "<group>"; };
+		B52651D21C12D03C00890365 /* ytcpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ytcpsocket.swift; sourceTree = "<group>"; };
+		B52651D61C13436C00890365 /* LocoControlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocoControlViewController.swift; sourceTree = "<group>"; };
+		B534EE411C1434D200E1F98A /* 636.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 636.JPG; sourceTree = "<group>"; };
+		B534EE431C143F2500E1F98A /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		B534EE451C1454B700E1F98A /* CSX.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CSX.jpg; sourceTree = "<group>"; };
+		B534EE461C1454B700E1F98A /* FS.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FS.JPG; sourceTree = "<group>"; };
+		B534EE491C15592700E1F98A /* bse.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bse.jpg; sourceTree = "<group>"; };
+		B534EE4B1C155AEA00E1F98A /* base.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = base.jpg; sourceTree = "<group>"; };
+		B534EE4D1C1615EC00E1F98A /* Function.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Function.swift; sourceTree = "<group>"; };
+		B534EE521C16B6DB00E1F98A /* NewLocoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewLocoViewController.swift; sourceTree = "<group>"; };
+		B53D187B1C0E3D4200D2A5CB /* LocoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocoManager.swift; path = ../LocoManager.swift; sourceTree = "<group>"; };
+		B55706891C0DB69F00981258 /* iThrottle2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iThrottle2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B557068C1C0DB69F00981258 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B557068E1C0DB69F00981258 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B55706911C0DB69F00981258 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B55706931C0DB69F00981258 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B55706961C0DB69F00981258 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B55706981C0DB69F00981258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B557069D1C0DB6A000981258 /* iThrottle2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iThrottle2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B55706A11C0DB6A000981258 /* iThrottle2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iThrottle2Tests.swift; sourceTree = "<group>"; };
+		B55706A31C0DB6A000981258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B55706A81C0DB6A000981258 /* iThrottle2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iThrottle2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B55706AC1C0DB6A000981258 /* iThrottle2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iThrottle2UITests.swift; sourceTree = "<group>"; };
+		B55706AE1C0DB6A000981258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B55706B11C0DB6A000981258 /* iThrottle2 WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iThrottle2 WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B55706B71C0DB6A000981258 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		B55706B91C0DB6A000981258 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B55706BB1C0DB6A000981258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B55706C01C0DB6A000981258 /* iThrottle2 WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "iThrottle2 WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B55706C61C0DB6A000981258 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		B55706C71C0DB6A000981258 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		B55706C91C0DB6A000981258 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		B55706CB1C0DB6A000981258 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		B55706CD1C0DB6A000981258 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B55706CF1C0DB6A000981258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B55706E31C0DB6E300981258 /* LocoInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocoInterfaceController.swift; path = "../iThrottle2 WatchKit App/LocoInterfaceController.swift"; sourceTree = "<group>"; };
+		B55706E91C0DDC8C00981258 /* LocoRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocoRow.swift; sourceTree = "<group>"; };
+		B55706EB1C0DDD4E00981258 /* LocoListInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocoListInterfaceController.swift; sourceTree = "<group>"; };
+		B55706EF1C0E213200981258 /* LocoViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocoViewCell.swift; sourceTree = "<group>"; };
+		B55706F11C0E232100981258 /* Loco.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loco.swift; sourceTree = "<group>"; };
+		B5C0FC351C142360009575F1 /* 222.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 222.jpg; sourceTree = "<group>"; };
+		B5EA54D31C136ED900A841BA /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B5EA54D51C1379FC00A841BA /* SRCPManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRCPManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B55706861C0DB69F00981258 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7100E2F85DD5930E5519A88F /* Pods_iThrottle2.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B557069A1C0DB6A000981258 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B55706A51C0DB6A000981258 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B55706BD1C0DB6A000981258 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A336A3455E94B9141E96AFF9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B397A3EE84133BB5820965D /* Pods_iThrottle2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B52651D81C1349AE00890365 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				B52651CF1C12D03B00890365 /* iThrottle2-Bridging-Header.h */,
+				B52651D01C12D03C00890365 /* ysocket.swift */,
+				B52651D11C12D03C00890365 /* ytcpsocket.c */,
+				B52651D21C12D03C00890365 /* ytcpsocket.swift */,
+			);
+			name = Lib;
+			sourceTree = "<group>";
+		};
+		B52651D91C1349B600890365 /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				B53D187B1C0E3D4200D2A5CB /* LocoManager.swift */,
+				B5EA54D31C136ED900A841BA /* NetworkManager.swift */,
+				B5EA54D51C1379FC00A841BA /* SRCPManager.swift */,
+			);
+			name = Singleton;
+			sourceTree = "<group>";
+		};
+		B52651DA1C1349CC00890365 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B55706F11C0E232100981258 /* Loco.swift */,
+				B534EE4D1C1615EC00E1F98A /* Function.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B52651DB1C1349D900890365 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B557068E1C0DB69F00981258 /* ViewController.swift */,
+				B52651D61C13436C00890365 /* LocoControlViewController.swift */,
+				B534EE521C16B6DB00E1F98A /* NewLocoViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		B55706801C0DB69F00981258 = {
+			isa = PBXGroup;
+			children = (
+				B557068B1C0DB69F00981258 /* iThrottle2 */,
+				B55706A01C0DB6A000981258 /* iThrottle2Tests */,
+				B55706AB1C0DB6A000981258 /* iThrottle2UITests */,
+				B55706B51C0DB6A000981258 /* iThrottle2 WatchKit App */,
+				B55706C41C0DB6A000981258 /* iThrottle2 WatchKit Extension */,
+				B557068A1C0DB69F00981258 /* Products */,
+				C56DEF6783736D160D781B13 /* Pods */,
+				A336A3455E94B9141E96AFF9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B557068A1C0DB69F00981258 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B55706891C0DB69F00981258 /* iThrottle2.app */,
+				B557069D1C0DB6A000981258 /* iThrottle2Tests.xctest */,
+				B55706A81C0DB6A000981258 /* iThrottle2UITests.xctest */,
+				B55706B11C0DB6A000981258 /* iThrottle2 WatchKit App.app */,
+				B55706C01C0DB6A000981258 /* iThrottle2 WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B557068B1C0DB69F00981258 /* iThrottle2 */ = {
+			isa = PBXGroup;
+			children = (
+				B5C0FC371C142365009575F1 /* image */,
+				B52651DB1C1349D900890365 /* ViewController */,
+				B52651DA1C1349CC00890365 /* Model */,
+				B52651D91C1349B600890365 /* Singleton */,
+				B52651D81C1349AE00890365 /* Lib */,
+				B557068C1C0DB69F00981258 /* AppDelegate.swift */,
+				B55706901C0DB69F00981258 /* Main.storyboard */,
+				B55706931C0DB69F00981258 /* Assets.xcassets */,
+				B55706951C0DB69F00981258 /* LaunchScreen.storyboard */,
+				B55706981C0DB69F00981258 /* Info.plist */,
+				B55706EF1C0E213200981258 /* LocoViewCell.swift */,
+				B534EE431C143F2500E1F98A /* Extension.swift */,
+			);
+			path = iThrottle2;
+			sourceTree = "<group>";
+		};
+		B55706A01C0DB6A000981258 /* iThrottle2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				B55706A11C0DB6A000981258 /* iThrottle2Tests.swift */,
+				B55706A31C0DB6A000981258 /* Info.plist */,
+			);
+			path = iThrottle2Tests;
+			sourceTree = "<group>";
+		};
+		B55706AB1C0DB6A000981258 /* iThrottle2UITests */ = {
+			isa = PBXGroup;
+			children = (
+				B55706AC1C0DB6A000981258 /* iThrottle2UITests.swift */,
+				B55706AE1C0DB6A000981258 /* Info.plist */,
+			);
+			path = iThrottle2UITests;
+			sourceTree = "<group>";
+		};
+		B55706B51C0DB6A000981258 /* iThrottle2 WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				B55706B61C0DB6A000981258 /* Interface.storyboard */,
+				B55706B91C0DB6A000981258 /* Assets.xcassets */,
+				B55706BB1C0DB6A000981258 /* Info.plist */,
+			);
+			path = "iThrottle2 WatchKit App";
+			sourceTree = "<group>";
+		};
+		B55706C41C0DB6A000981258 /* iThrottle2 WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B55706E91C0DDC8C00981258 /* LocoRow.swift */,
+				B55706EB1C0DDD4E00981258 /* LocoListInterfaceController.swift */,
+				B55706E31C0DB6E300981258 /* LocoInterfaceController.swift */,
+				B55706C71C0DB6A000981258 /* InterfaceController.swift */,
+				B55706C91C0DB6A000981258 /* ExtensionDelegate.swift */,
+				B55706CB1C0DB6A000981258 /* NotificationController.swift */,
+				B55706CD1C0DB6A000981258 /* Assets.xcassets */,
+				B55706CF1C0DB6A000981258 /* Info.plist */,
+				B55706C51C0DB6A000981258 /* Supporting Files */,
+			);
+			path = "iThrottle2 WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		B55706C51C0DB6A000981258 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B55706C61C0DB6A000981258 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B5C0FC371C142365009575F1 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				B534EE4B1C155AEA00E1F98A /* base.jpg */,
+				B534EE491C15592700E1F98A /* bse.jpg */,
+				B534EE451C1454B700E1F98A /* CSX.jpg */,
+				B534EE461C1454B700E1F98A /* FS.JPG */,
+				B534EE411C1434D200E1F98A /* 636.JPG */,
+				B5C0FC351C142360009575F1 /* 222.jpg */,
+			);
+			name = image;
+			sourceTree = "<group>";
+		};
+		C56DEF6783736D160D781B13 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				47A3346ACB7F87228E693DFC /* Pods-iThrottle2.debug.xcconfig */,
+				54DAECE9F155C290B5D0FC2D /* Pods-iThrottle2.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B55706881C0DB69F00981258 /* iThrottle2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B55706DA1C0DB6A000981258 /* Build configuration list for PBXNativeTarget "iThrottle2" */;
+			buildPhases = (
+				2BA83B884CBEDA8ED52D0729 /* Check Pods Manifest.lock */,
+				B55706851C0DB69F00981258 /* Sources */,
+				B55706861C0DB69F00981258 /* Frameworks */,
+				B55706871C0DB69F00981258 /* Resources */,
+				B55706D91C0DB6A000981258 /* Embed Watch Content */,
+				DE3AC7581F47C4C0BEFCA778 /* Embed Pods Frameworks */,
+				5CE4CE02A73D6D9A93605F5E /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B55706B41C0DB6A000981258 /* PBXTargetDependency */,
+			);
+			name = iThrottle2;
+			productName = iThrottle2;
+			productReference = B55706891C0DB69F00981258 /* iThrottle2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B557069C1C0DB6A000981258 /* iThrottle2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B55706DD1C0DB6A000981258 /* Build configuration list for PBXNativeTarget "iThrottle2Tests" */;
+			buildPhases = (
+				B55706991C0DB6A000981258 /* Sources */,
+				B557069A1C0DB6A000981258 /* Frameworks */,
+				B557069B1C0DB6A000981258 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B557069F1C0DB6A000981258 /* PBXTargetDependency */,
+			);
+			name = iThrottle2Tests;
+			productName = iThrottle2Tests;
+			productReference = B557069D1C0DB6A000981258 /* iThrottle2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B55706A71C0DB6A000981258 /* iThrottle2UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B55706E01C0DB6A000981258 /* Build configuration list for PBXNativeTarget "iThrottle2UITests" */;
+			buildPhases = (
+				B55706A41C0DB6A000981258 /* Sources */,
+				B55706A51C0DB6A000981258 /* Frameworks */,
+				B55706A61C0DB6A000981258 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B55706AA1C0DB6A000981258 /* PBXTargetDependency */,
+			);
+			name = iThrottle2UITests;
+			productName = iThrottle2UITests;
+			productReference = B55706A81C0DB6A000981258 /* iThrottle2UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		B55706B01C0DB6A000981258 /* iThrottle2 WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B55706D61C0DB6A000981258 /* Build configuration list for PBXNativeTarget "iThrottle2 WatchKit App" */;
+			buildPhases = (
+				B55706AF1C0DB6A000981258 /* Resources */,
+				B55706D51C0DB6A000981258 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B55706C31C0DB6A000981258 /* PBXTargetDependency */,
+			);
+			name = "iThrottle2 WatchKit App";
+			productName = "iThrottle2 WatchKit App";
+			productReference = B55706B11C0DB6A000981258 /* iThrottle2 WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		B55706BF1C0DB6A000981258 /* iThrottle2 WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B55706D21C0DB6A000981258 /* Build configuration list for PBXNativeTarget "iThrottle2 WatchKit Extension" */;
+			buildPhases = (
+				B55706BC1C0DB6A000981258 /* Sources */,
+				B55706BD1C0DB6A000981258 /* Frameworks */,
+				B55706BE1C0DB6A000981258 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iThrottle2 WatchKit Extension";
+			productName = "iThrottle2 WatchKit Extension";
+			productReference = B55706C01C0DB6A000981258 /* iThrottle2 WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B55706811C0DB69F00981258 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Andrea Terzani";
+				TargetAttributes = {
+					B55706881C0DB69F00981258 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					B557069C1C0DB6A000981258 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = B55706881C0DB69F00981258;
+					};
+					B55706A71C0DB6A000981258 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = B55706881C0DB69F00981258;
+					};
+					B55706B01C0DB6A000981258 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					B55706BF1C0DB6A000981258 = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = R8Y294JXA8;
+					};
+				};
+			};
+			buildConfigurationList = B55706841C0DB69F00981258 /* Build configuration list for PBXProject "iThrottle2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B55706801C0DB69F00981258;
+			productRefGroup = B557068A1C0DB69F00981258 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B55706881C0DB69F00981258 /* iThrottle2 */,
+				B557069C1C0DB6A000981258 /* iThrottle2Tests */,
+				B55706A71C0DB6A000981258 /* iThrottle2UITests */,
+				B55706B01C0DB6A000981258 /* iThrottle2 WatchKit App */,
+				B55706BF1C0DB6A000981258 /* iThrottle2 WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B55706871C0DB69F00981258 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5C0FC361C142360009575F1 /* 222.jpg in Resources */,
+				B55706971C0DB69F00981258 /* LaunchScreen.storyboard in Resources */,
+				B534EE421C1434D200E1F98A /* 636.JPG in Resources */,
+				B55706941C0DB69F00981258 /* Assets.xcassets in Resources */,
+				B534EE4C1C155AEA00E1F98A /* base.jpg in Resources */,
+				B534EE471C1454B700E1F98A /* CSX.jpg in Resources */,
+				B534EE481C1454B700E1F98A /* FS.JPG in Resources */,
+				B55706921C0DB69F00981258 /* Main.storyboard in Resources */,
+				B534EE4A1C15592700E1F98A /* bse.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B557069B1C0DB6A000981258 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B55706A61C0DB6A000981258 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B55706AF1C0DB6A000981258 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B55706BA1C0DB6A000981258 /* Assets.xcassets in Resources */,
+				B55706B81C0DB6A000981258 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B55706BE1C0DB6A000981258 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B55706CE1C0DB6A000981258 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2BA83B884CBEDA8ED52D0729 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5CE4CE02A73D6D9A93605F5E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iThrottle2/Pods-iThrottle2-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE3AC7581F47C4C0BEFCA778 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iThrottle2/Pods-iThrottle2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B55706851C0DB69F00981258 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B557068F1C0DB69F00981258 /* ViewController.swift in Sources */,
+				B52651D31C12D03C00890365 /* ysocket.swift in Sources */,
+				B534EE4E1C1615EC00E1F98A /* Function.swift in Sources */,
+				B55706F01C0E213200981258 /* LocoViewCell.swift in Sources */,
+				B534EE441C143F2500E1F98A /* Extension.swift in Sources */,
+				B52651D51C12D03C00890365 /* ytcpsocket.swift in Sources */,
+				B5EA54D41C136ED900A841BA /* NetworkManager.swift in Sources */,
+				B53D187C1C0E3D4200D2A5CB /* LocoManager.swift in Sources */,
+				B55706F21C0E232100981258 /* Loco.swift in Sources */,
+				B52651D71C13436C00890365 /* LocoControlViewController.swift in Sources */,
+				B534EE531C16B6DB00E1F98A /* NewLocoViewController.swift in Sources */,
+				B52651D41C12D03C00890365 /* ytcpsocket.c in Sources */,
+				B557068D1C0DB69F00981258 /* AppDelegate.swift in Sources */,
+				B5EA54D61C1379FC00A841BA /* SRCPManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B55706991C0DB6A000981258 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B55706A21C0DB6A000981258 /* iThrottle2Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B55706A41C0DB6A000981258 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B55706AD1C0DB6A000981258 /* iThrottle2UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B55706BC1C0DB6A000981258 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B55706CC1C0DB6A000981258 /* NotificationController.swift in Sources */,
+				B55706EA1C0DDC8C00981258 /* LocoRow.swift in Sources */,
+				B55706CA1C0DB6A000981258 /* ExtensionDelegate.swift in Sources */,
+				B55706E51C0DB88700981258 /* LocoInterfaceController.swift in Sources */,
+				B55706EC1C0DDD4E00981258 /* LocoListInterfaceController.swift in Sources */,
+				B55706C81C0DB6A000981258 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B557069F1C0DB6A000981258 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B55706881C0DB69F00981258 /* iThrottle2 */;
+			targetProxy = B557069E1C0DB6A000981258 /* PBXContainerItemProxy */;
+		};
+		B55706AA1C0DB6A000981258 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B55706881C0DB69F00981258 /* iThrottle2 */;
+			targetProxy = B55706A91C0DB6A000981258 /* PBXContainerItemProxy */;
+		};
+		B55706B41C0DB6A000981258 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B55706B01C0DB6A000981258 /* iThrottle2 WatchKit App */;
+			targetProxy = B55706B31C0DB6A000981258 /* PBXContainerItemProxy */;
+		};
+		B55706C31C0DB6A000981258 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B55706BF1C0DB6A000981258 /* iThrottle2 WatchKit Extension */;
+			targetProxy = B55706C21C0DB6A000981258 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B55706901C0DB69F00981258 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B55706911C0DB69F00981258 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B55706951C0DB69F00981258 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B55706961C0DB69F00981258 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B55706B61C0DB6A000981258 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B55706B71C0DB6A000981258 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B55706D01C0DB6A000981258 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B55706D11C0DB6A000981258 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B55706D31C0DB6A000981258 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "iThrottle2 WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atdevapps.iThrottle2.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		B55706D41C0DB6A000981258 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "iThrottle2 WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atdevapps.iThrottle2.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		B55706D71C0DB6A000981258 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = iThrottle2_WatchKit_Extension;
+				INFOPLIST_FILE = "iThrottle2 WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atdevapps.iThrottle2.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		B55706D81C0DB6A000981258 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = iThrottle2_WatchKit_Extension;
+				INFOPLIST_FILE = "iThrottle2 WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atdevapps.iThrottle2.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		B55706DB1C0DB6A000981258 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47A3346ACB7F87228E693DFC /* Pods-iThrottle2.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = iThrottle2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atdevapps.iThrottle2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iThrottle2/iThrottle2-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B55706DC1C0DB6A000981258 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54DAECE9F155C290B5D0FC2D /* Pods-iThrottle2.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = iThrottle2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atdevapps.iThrottle2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iThrottle2/iThrottle2-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		B55706DE1C0DB6A000981258 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = iThrottle2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atdevapps.iThrottle2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iThrottle2.app/iThrottle2";
+			};
+			name = Debug;
+		};
+		B55706DF1C0DB6A000981258 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = iThrottle2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atdevapps.iThrottle2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iThrottle2.app/iThrottle2";
+			};
+			name = Release;
+		};
+		B55706E11C0DB6A000981258 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = iThrottle2UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atdevapps.iThrottle2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = iThrottle2;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		B55706E21C0DB6A000981258 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = iThrottle2UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atdevapps.iThrottle2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = iThrottle2;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B55706841C0DB69F00981258 /* Build configuration list for PBXProject "iThrottle2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B55706D01C0DB6A000981258 /* Debug */,
+				B55706D11C0DB6A000981258 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B55706D21C0DB6A000981258 /* Build configuration list for PBXNativeTarget "iThrottle2 WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B55706D31C0DB6A000981258 /* Debug */,
+				B55706D41C0DB6A000981258 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B55706D61C0DB6A000981258 /* Build configuration list for PBXNativeTarget "iThrottle2 WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B55706D71C0DB6A000981258 /* Debug */,
+				B55706D81C0DB6A000981258 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B55706DA1C0DB6A000981258 /* Build configuration list for PBXNativeTarget "iThrottle2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B55706DB1C0DB6A000981258 /* Debug */,
+				B55706DC1C0DB6A000981258 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B55706DD1C0DB6A000981258 /* Build configuration list for PBXNativeTarget "iThrottle2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B55706DE1C0DB6A000981258 /* Debug */,
+				B55706DF1C0DB6A000981258 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B55706E01C0DB6A000981258 /* Build configuration list for PBXNativeTarget "iThrottle2UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B55706E11C0DB6A000981258 /* Debug */,
+				B55706E21C0DB6A000981258 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B55706811C0DB69F00981258 /* Project object */;
+}
