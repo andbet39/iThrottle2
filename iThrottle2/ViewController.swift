@@ -29,7 +29,7 @@ class ViewController: UITableViewController,NewLocoViewControllerDelegate{
 
     @IBAction func connectButton(sender: AnyObject) {
         
-        protocolManager.connect()
+       
       
         
         
@@ -106,6 +106,12 @@ class ViewController: UITableViewController,NewLocoViewControllerDelegate{
         return 120
     }
     
+    override func tableView(tableView: UITableView, didEndDisplayingCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+    
+        let locoCell = cell as! LocoViewCell
+        NSLog("Cell become invisible")
+        locoCell.timer?.invalidate()
+    }
     
     func didSaveNewLoco(loco: Loco) {
         

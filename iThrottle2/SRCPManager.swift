@@ -8,26 +8,36 @@
 
 import UIKit
 
+protocol SRCPManagerDelegate{
+    func didConnect()
+    func updatedStatus()
+}
+
 class SRCPManager:NetworkManagerDelegate {
 
     
     static let sharedInstance = SRCPManager()
     
+    var delegate:SRCPManagerDelegate?
+
     var ready:Bool = false
     var connecting:Bool = false
     var settingProtocol:Bool = false
     var settingCommand:Bool = false
     var settingGo:Bool = false
-    
+    var status:String = "Disconnected"
+
     let net = NetworkManager.sharedInstance
 
     
-    func connect(){
+    func connect(host:String,port:String){
         net.delegate=self
         
         connecting = true;
         
-        net.connect()
+        net.connect(host,port:port)
+        delegate?.updatedStatus()
+        status = "SRCP Connecting..."
         net.sendMessage("SET PROTOCOL SRCP 0.8.4")
         settingProtocol=true
     }
@@ -95,7 +105,10 @@ class SRCPManager:NetworkManagerDelegate {
                     print(mess) 
                     settingGo=false
                     ready=true;
-                    toremove.append(mess)                    
+                    status = "SRCP Connected"
+                    delegate?.didConnect()
+
+                    toremove.append(mess)
                 }
             }
             

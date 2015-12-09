@@ -23,6 +23,8 @@
 		B534EE571C17468100E1F98A /* backBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = B534EE541C17468100E1F98A /* backBtn.png */; };
 		B534EE581C17468100E1F98A /* backBtn2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B534EE551C17468100E1F98A /* backBtn2x.png */; };
 		B534EE591C17468100E1F98A /* backBtn3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B534EE561C17468100E1F98A /* backBtn3x.png */; };
+		B534EE5B1C17748000E1F98A /* ServerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B534EE5A1C17748000E1F98A /* ServerViewController.swift */; };
+		B534EE601C1778F900E1F98A /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = B534EE5F1C1778F900E1F98A /* Server.swift */; };
 		B53D187C1C0E3D4200D2A5CB /* LocoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53D187B1C0E3D4200D2A5CB /* LocoManager.swift */; };
 		B557068D1C0DB69F00981258 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B557068C1C0DB69F00981258 /* AppDelegate.swift */; };
 		B557068F1C0DB69F00981258 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B557068E1C0DB69F00981258 /* ViewController.swift */; };
@@ -151,6 +153,8 @@
 		B534EE541C17468100E1F98A /* backBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backBtn.png; sourceTree = "<group>"; };
 		B534EE551C17468100E1F98A /* backBtn2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backBtn2x.png; sourceTree = "<group>"; };
 		B534EE561C17468100E1F98A /* backBtn3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backBtn3x.png; sourceTree = "<group>"; };
+		B534EE5A1C17748000E1F98A /* ServerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerViewController.swift; sourceTree = "<group>"; };
+		B534EE5F1C1778F900E1F98A /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		B53D187B1C0E3D4200D2A5CB /* LocoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocoManager.swift; path = ../LocoManager.swift; sourceTree = "<group>"; };
 		B55706891C0DB69F00981258 /* iThrottle2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iThrottle2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B557068C1C0DB69F00981258 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -279,6 +283,7 @@
 			children = (
 				B55706F11C0E232100981258 /* Loco.swift */,
 				B534EE4D1C1615EC00E1F98A /* Function.swift */,
+				B534EE5F1C1778F900E1F98A /* Server.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -289,6 +294,7 @@
 				B557068E1C0DB69F00981258 /* ViewController.swift */,
 				B52651D61C13436C00890365 /* LocoControlViewController.swift */,
 				B534EE521C16B6DB00E1F98A /* NewLocoViewController.swift */,
+				B534EE5A1C17748000E1F98A /* ServerViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -415,9 +421,9 @@
 				B5E736811C176F51005DD271 /* save@2x.png */,
 				B5E736821C176F51005DD271 /* save@3x.png */,
 				B5E736831C176F51005DD271 /* setting.png */,
-				B5E736841C176F51005DD271 /* setting@1x.png */,
 				B5E736851C176F51005DD271 /* setting@2x.png */,
 				B5E736861C176F51005DD271 /* setting@3x.png */,
+				B5E736841C176F51005DD271 /* setting@1x.png */,
 				B5E7366C1C175727005DD271 /* 2249.jpg */,
 				B534EE541C17468100E1F98A /* backBtn.png */,
 				B534EE551C17468100E1F98A /* backBtn2x.png */,
@@ -723,6 +729,7 @@
 				B557068F1C0DB69F00981258 /* ViewController.swift in Sources */,
 				B52651D31C12D03C00890365 /* ysocket.swift in Sources */,
 				B534EE4E1C1615EC00E1F98A /* Function.swift in Sources */,
+				B534EE5B1C17748000E1F98A /* ServerViewController.swift in Sources */,
 				B55706F01C0E213200981258 /* LocoViewCell.swift in Sources */,
 				B534EE441C143F2500E1F98A /* Extension.swift in Sources */,
 				B52651D51C12D03C00890365 /* ytcpsocket.swift in Sources */,
@@ -733,6 +740,7 @@
 				B534EE531C16B6DB00E1F98A /* NewLocoViewController.swift in Sources */,
 				B52651D41C12D03C00890365 /* ytcpsocket.c in Sources */,
 				B557068D1C0DB69F00981258 /* AppDelegate.swift in Sources */,
+				B534EE601C1778F900E1F98A /* Server.swift in Sources */,
 				B5EA54D61C1379FC00A841BA /* SRCPManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -972,6 +980,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = iThrottle2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.atdevapps.iThrottle2;
@@ -987,6 +996,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = iThrottle2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.atdevapps.iThrottle2;

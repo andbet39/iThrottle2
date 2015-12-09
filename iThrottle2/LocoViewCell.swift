@@ -75,6 +75,17 @@ class LocoViewCell: UITableViewCell {
         }
     }
    
+    override func willMoveToSuperview(newSuperview: UIView?) {
+            super.willMoveToSuperview(newSuperview)
+        
+            NSLog("wiil move to superview")
+        
+            //timer?.invalidate()
+    
+    }
+    
+    
+    
     func update(){
         
         self.updateInterface()

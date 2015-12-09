@@ -26,12 +26,12 @@ class NetworkManager: NSObject , NSStreamDelegate {
     private var inputStream: NSInputStream!
     private var outputStream: NSOutputStream!
     
-    func connect() {
+    func connect(host:String,port:String) {
         
         var readStream:  Unmanaged<CFReadStream>?
         var writeStream: Unmanaged<CFWriteStream>?
         
-        CFStreamCreatePairWithSocketToHost(nil, self.serverAddress, self.serverPort, &readStream, &writeStream)
+        CFStreamCreatePairWithSocketToHost(nil, host, UInt32(port)!, &readStream, &writeStream)
     
         
         self.inputStream = readStream!.takeRetainedValue()
