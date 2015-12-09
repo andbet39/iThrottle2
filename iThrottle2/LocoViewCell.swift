@@ -56,6 +56,8 @@ class LocoViewCell: UITableViewCell {
         if(loco?.imageData != nil){
             
             let img = UIImage(data: (loco?.imageData)!)
+
+            //TODO : Move this code to save of new loco
             let resized = Toucan(image: img! ).resize(CGSize(width: 400, height: 150), fitMode: Toucan.Resize.FitMode.Crop).image
             
             self.backgroundView = UIImageView(image: resized)

@@ -45,7 +45,7 @@ class NewLocoViewController: UIViewController,UINavigationControllerDelegate, UI
        
         imagePicker =  UIImagePickerController()
         imagePicker.delegate = self
-        imagePicker.sourceType = .PhotoLibrary
+        imagePicker.sourceType = .Camera
         
         presentViewController(imagePicker, animated: true, completion: nil)
         
