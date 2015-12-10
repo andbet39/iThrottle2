@@ -47,6 +47,7 @@
 		B55706EC1C0DDD4E00981258 /* LocoListInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55706EB1C0DDD4E00981258 /* LocoListInterfaceController.swift */; };
 		B55706F01C0E213200981258 /* LocoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55706EF1C0E213200981258 /* LocoViewCell.swift */; };
 		B55706F21C0E232100981258 /* Loco.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55706F11C0E232100981258 /* Loco.swift */; };
+		B57638731C1A2380007A5166 /* WatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57638721C1A2380007A5166 /* WatchManager.swift */; };
 		B5C0FC361C142360009575F1 /* 222.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B5C0FC351C142360009575F1 /* 222.jpg */; };
 		B5E7366D1C175727005DD271 /* 2249.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B5E7366C1C175727005DD271 /* 2249.jpg */; };
 		B5E736871C176F51005DD271 /* addBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = B5E7366E1C176F51005DD271 /* addBtn.png */; };
@@ -190,6 +191,7 @@
 		B55706EB1C0DDD4E00981258 /* LocoListInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocoListInterfaceController.swift; sourceTree = "<group>"; };
 		B55706EF1C0E213200981258 /* LocoViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocoViewCell.swift; sourceTree = "<group>"; };
 		B55706F11C0E232100981258 /* Loco.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loco.swift; sourceTree = "<group>"; };
+		B57638721C1A2380007A5166 /* WatchManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchManager.swift; sourceTree = "<group>"; };
 		B5C0FC351C142360009575F1 /* 222.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 222.jpg; sourceTree = "<group>"; };
 		B5E7366C1C175727005DD271 /* 2249.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2249.jpg; sourceTree = "<group>"; };
 		B5E7366E1C176F51005DD271 /* addBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addBtn.png; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 				B53D187B1C0E3D4200D2A5CB /* LocoManager.swift */,
 				B5EA54D31C136ED900A841BA /* NetworkManager.swift */,
 				B5EA54D51C1379FC00A841BA /* SRCPManager.swift */,
+				B57638721C1A2380007A5166 /* WatchManager.swift */,
 			);
 			name = Singleton;
 			sourceTree = "<group>";
@@ -752,6 +755,7 @@
 				B53D187C1C0E3D4200D2A5CB /* LocoManager.swift in Sources */,
 				B55706F21C0E232100981258 /* Loco.swift in Sources */,
 				B52651D71C13436C00890365 /* LocoControlViewController.swift in Sources */,
+				B57638731C1A2380007A5166 /* WatchManager.swift in Sources */,
 				B534EE531C16B6DB00E1F98A /* NewLocoViewController.swift in Sources */,
 				B52651D41C12D03C00890365 /* ytcpsocket.c in Sources */,
 				B522891A1C18BC0B00ACF99A /* EditLocoViewController.swift in Sources */,

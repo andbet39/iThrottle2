@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,WCSessionDelegate {
         
         if (WCSession.isSupported()) {
             let session = WCSession.defaultSession()
-            session.delegate = self
+            session.delegate = WatchManager.sharedInstance
             session.activateSession()
             
             if session.paired != true {
@@ -65,25 +65,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate,WCSessionDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-    func session(session: WCSession, didReceiveMessage message: [String : AnyObject], replyHandler: ([String : AnyObject]) -> Void)
-    {
-        
-        var replyValues = Dictionary<String, AnyObject>()
-
-        switch message["command"] as! String {
-        case "GETLOCO" :
-        
-            replyValues["LocoList"] = locoManager?.getLocoList()
-            
-        
-        default:
-            break
-        }
-        
-        replyHandler(replyValues)
-        
-        
-    }
-
+    
 }
 
