@@ -39,8 +39,9 @@ class ServerViewController: UIViewController,SRCPManagerDelegate ,UITableViewDat
     
     @IBAction func connectBtn(sender: AnyObject) {
     
-        protocolManager.connect(hostText.text!,port: portText.text!)
-    
+        if(validatefields()){
+            protocolManager.connect(hostText.text!,port: portText.text!)
+        }
     }
 
     @IBAction func cancelBtn(sender: AnyObject) {
@@ -49,6 +50,37 @@ class ServerViewController: UIViewController,SRCPManagerDelegate ,UITableViewDat
         }
     }
     
+    func validatefields() ->Bool{
+        
+        var msg=""
+        if(hostText.text == ""){
+            msg="Hostname cannot be null."
+        }
+        if(Int(portText.text!) == nil)
+        {
+            msg="Port must be a number."
+            
+        }
+        
+        
+        if(msg != ""){
+            
+            // Initialize Alert View
+            let alertView = UIAlertView(title: "Alert", message: msg, delegate: self, cancelButtonTitle: "Ok")
+            
+            // Configure Alert View
+            alertView.tag = 2
+            
+            // Show Alert View
+            alertView.show()
+            
+            return false
+            
+        }
+        return true
+        
+    }
+
     
     func updatedStatus() {
         statusLabel.text = "Status : \(protocolManager.status)"
