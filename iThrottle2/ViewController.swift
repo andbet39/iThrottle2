@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UITableViewController,NewLocoViewControllerDelegate{
+class ViewController: UITableViewController,NewLocoViewControllerDelegate,LocoControlViewControllerDelegate{
     
     let locoManager  = LocoManager.sharedInstance
     var selectedLoco:Loco?
@@ -45,6 +45,7 @@ class ViewController: UITableViewController,NewLocoViewControllerDelegate{
         if segue.identifier == "LocoControlSegue"
         {
             if let destinationVC = segue.destinationViewController as? LocoControlViewController{
+                destinationVC.delegate  = self
                 destinationVC.loco  = self.selectedLoco!
             }
         }
@@ -58,6 +59,8 @@ class ViewController: UITableViewController,NewLocoViewControllerDelegate{
         
         
     }
+    
+    
     
     
     override func  tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -115,11 +118,22 @@ class ViewController: UITableViewController,NewLocoViewControllerDelegate{
     
     func didSaveNewLoco(loco: Loco) {
         
-       // self.locoTableView.reloadData()
-        
         self.locoTableView.insertRowsAtIndexPaths([NSIndexPath(forRow: (locoManager?.locos?.count)!-1, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Bottom)
         
         
+    }
+    
+    func didDeleteLoco(loco: Loco) {
+        
+    
+        locoManager?.deleteLoco(loco)
+        self.locoTableView.reloadData()
+        
+    }
+    
+    func didUpdateLoco(loco: Loco) {
+        
+        self.locoTableView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {

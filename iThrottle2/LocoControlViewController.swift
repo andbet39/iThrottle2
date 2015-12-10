@@ -11,8 +11,17 @@ import ChameleonFramework
 import Toucan
 import RealmSwift
 
-class LocoControlViewController: UIViewController {
 
+protocol  LocoControlViewControllerDelegate{
+    func didUpdateLoco(loco:Loco)
+    func didDeleteLoco(loco:Loco)
+}
+
+class LocoControlViewController: UIViewController,EditLocoViewControllerDelegate {
+
+    
+    var delegate:LocoControlViewControllerDelegate?
+    
     
     let realm = try! Realm()
     
@@ -160,7 +169,6 @@ class LocoControlViewController: UIViewController {
     func addGradient(){
         
     
-        
     
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = mainImg.frame
@@ -519,6 +527,64 @@ class LocoControlViewController: UIViewController {
     }
     
     
+    @IBAction func editButtonAction(sender: AnyObject) {
+        
+        self.performSegueWithIdentifier("EditLocoSegue", sender: self)
+    }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "EditLocoSegue" {
+            
+                if let destinationVC = segue.destinationViewController as? EditLocoViewController{
+                    destinationVC.loco  = self.loco
+                    destinationVC.delegate = self
+                }
+            
+        }
+    }
+    
+    func didUpdateLoco(loco:Loco)
+    {
+        self.loco=loco
+        
+        self.last_speed=loco.speed;
+        self.speedSlider.value = Float(loco.speed)
+        self.speedLabel.text = "Speed : \(loco.speed)"
+        self.addressLabel.text = "Address : \(loco.address)"
+        
+        
+        self.mainImg.image = loco.image()
+        
+        locoNameLabel.text=loco.name
+        
+        if(loco.direction == 0){
+            self.dirButton.setTitle("<", forState: UIControlState.Normal)
+        }else{
+            self.dirButton.setTitle(">", forState: UIControlState.Normal)
+        }
+        
+        
+        
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "backButton")
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
+        
+        styleView()
+        addGradient()
+        
+        delegate?.didUpdateLoco(loco)
+        
+        
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: "update", userInfo: nil, repeats: true)
+        
 
+    }
+    
+    
+    func didDeleteLoco(loco: Loco) {
+        
+            self.navigationController?.popToRootViewControllerAnimated(false)
+            delegate?.didDeleteLoco(loco)
+        
+    }
 }

@@ -51,6 +51,38 @@ class LocoManager {
     
     }
     
+    func deleteLoco(loco:Loco){
+    
+        var idx = -1
+        
+        for (var i=0;i<self.locos?.count;i++){
+            if(self.locos![i] == loco){
+                idx=i
+            }
+        }
+        
+        if(idx > -1){
+            self.locos?.removeAtIndex(idx);
+        }
+        
+        let realm = try! Realm()
+        try! realm.write {
+            realm.delete(loco)
+        }
+        
+      //  self.locos?.removeAtIndex(loco)
+
+    }
+    
+    func updateLoco(loco:Loco){
+        
+        let realm = try! Realm()
+        try! realm.write {
+            realm.add(loco)
+        }
+        
+    }
+    
     
     func updateLocoWithLoco(newloco:Loco){
     
