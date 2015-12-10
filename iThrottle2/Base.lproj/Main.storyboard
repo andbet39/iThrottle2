@@ -25,7 +25,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="41a-bF-4VX">
-                                            <rect key="frame" x="-12" y="56" width="373" height="30"/>
+                                            <rect key="frame" x="-12" y="56" width="377" height="30"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNF-lu-Igp">
                                                     <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -52,7 +52,7 @@
                                                     </connections>
                                                 </button>
                                                 <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Saj-QG-bGZ">
-                                                    <rect key="frame" x="43" y="0.0" width="332" height="31"/>
+                                                    <rect key="frame" x="43" y="0.0" width="336" height="31"/>
                                                     <animations/>
                                                     <connections>
                                                         <action selector="speedSliderAction:" destination="UTG-SB-9fd" eventType="valueChanged" id="skm-pK-3UU"/>
@@ -468,13 +468,13 @@
                                 </variation>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="nra-o8-C7t">
-                                <rect key="frame" x="0.0" y="183" width="299" height="116"/>
+                                <rect key="frame" x="0.0" y="183" width="303" height="116"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kTu-CG-MmK">
-                                        <rect key="frame" x="0.0" y="0.0" width="299" height="66"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="303" height="66"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7OB-Ri-W6T">
-                                                <rect key="frame" x="0.0" y="0.0" width="299" height="42"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="303" height="42"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -487,10 +487,10 @@
                                                 </variation>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="SvG-PM-TZU">
-                                                <rect key="frame" x="0.0" y="42" width="299" height="24"/>
+                                                <rect key="frame" x="0.0" y="42" width="303" height="24"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Speed : 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLo-Pk-hyz">
-                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="24"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="152" height="24"/>
                                                         <animations/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -503,7 +503,7 @@
                                                         </variation>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Address : 19" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gme-lA-hcZ">
-                                                        <rect key="frame" x="150" y="0.0" width="149" height="24"/>
+                                                        <rect key="frame" x="152" y="0.0" width="151" height="24"/>
                                                         <animations/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -535,7 +535,7 @@
                                         <variation key="heightClass=regular-widthClass=compact" axis="vertical"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dwP-7s-YyP">
-                                        <rect key="frame" x="0.0" y="86" width="299" height="30"/>
+                                        <rect key="frame" x="0.0" y="86" width="303" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrm-u7-Mlo">
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -568,7 +568,7 @@
                                                 </connections>
                                             </button>
                                             <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="128" translatesAutoresizingMaskIntoConstraints="NO" id="fPu-xP-i1B">
-                                                <rect key="frame" x="38" y="0.0" width="263" height="31"/>
+                                                <rect key="frame" x="38" y="0.0" width="267" height="31"/>
                                                 <animations/>
                                                 <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
                                                     <rect key="frame" x="38" y="0.0" width="219" height="31"/>
@@ -1388,17 +1388,17 @@
                                 <exclude reference="5Bq-Yc-Cd2"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="WEd-fD-36S"/>
+                                <exclude reference="b8w-SA-XYV"/>
                                 <exclude reference="51H-I2-mzS"/>
                                 <exclude reference="LCp-4A-NPe"/>
                                 <exclude reference="h0M-qf-tPQ"/>
-                                <exclude reference="EKF-HU-Ns4"/>
-                                <exclude reference="cXG-Ly-dxs"/>
-                                <exclude reference="he1-M8-rF0"/>
-                                <exclude reference="WEd-fD-36S"/>
-                                <exclude reference="b8w-SA-XYV"/>
                                 <exclude reference="4jh-ch-7Hi"/>
                                 <exclude reference="4m8-wY-F6O"/>
                                 <exclude reference="uXY-HH-wKl"/>
+                                <exclude reference="EKF-HU-Ns4"/>
+                                <exclude reference="cXG-Ly-dxs"/>
+                                <exclude reference="he1-M8-rF0"/>
                                 <exclude reference="YOo-B0-6Q0"/>
                             </mask>
                         </variation>
@@ -1409,17 +1409,17 @@
                                 <include reference="5Bq-Yc-Cd2"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="WEd-fD-36S"/>
+                                <include reference="b8w-SA-XYV"/>
                                 <include reference="51H-I2-mzS"/>
                                 <include reference="LCp-4A-NPe"/>
                                 <include reference="h0M-qf-tPQ"/>
-                                <include reference="EKF-HU-Ns4"/>
-                                <include reference="cXG-Ly-dxs"/>
-                                <include reference="he1-M8-rF0"/>
-                                <include reference="WEd-fD-36S"/>
-                                <include reference="b8w-SA-XYV"/>
                                 <include reference="4jh-ch-7Hi"/>
                                 <include reference="4m8-wY-F6O"/>
                                 <include reference="uXY-HH-wKl"/>
+                                <include reference="EKF-HU-Ns4"/>
+                                <include reference="cXG-Ly-dxs"/>
+                                <include reference="he1-M8-rF0"/>
                                 <include reference="YOo-B0-6Q0"/>
                             </mask>
                         </variation>
@@ -1686,20 +1686,20 @@
                                 <exclude reference="Ojx-Ks-J4d"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="eVC-Tv-UIE"/>
-                                <exclude reference="tPO-Gk-HCX"/>
-                                <exclude reference="w6Q-pn-6ec"/>
+                                <exclude reference="9A1-Ze-pws"/>
+                                <exclude reference="lde-a3-2S4"/>
+                                <exclude reference="Z01-pq-DzL"/>
+                                <exclude reference="orV-Cq-WLY"/>
                                 <exclude reference="UeG-z4-11h"/>
                                 <exclude reference="W7l-hn-qPs"/>
                                 <exclude reference="aRp-oF-18s"/>
                                 <exclude reference="wBF-rY-HkY"/>
+                                <exclude reference="eVC-Tv-UIE"/>
+                                <exclude reference="tPO-Gk-HCX"/>
+                                <exclude reference="w6Q-pn-6ec"/>
                                 <exclude reference="9fh-lK-UKQ"/>
                                 <exclude reference="9hm-Px-lFX"/>
                                 <exclude reference="RuD-Nv-x33"/>
-                                <exclude reference="Z01-pq-DzL"/>
-                                <exclude reference="orV-Cq-WLY"/>
-                                <exclude reference="9A1-Ze-pws"/>
-                                <exclude reference="lde-a3-2S4"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -1710,20 +1710,20 @@
                                 <include reference="Ojx-Ks-J4d"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="eVC-Tv-UIE"/>
-                                <include reference="tPO-Gk-HCX"/>
-                                <include reference="w6Q-pn-6ec"/>
+                                <include reference="9A1-Ze-pws"/>
+                                <include reference="lde-a3-2S4"/>
+                                <include reference="Z01-pq-DzL"/>
+                                <include reference="orV-Cq-WLY"/>
                                 <include reference="UeG-z4-11h"/>
                                 <include reference="W7l-hn-qPs"/>
                                 <include reference="aRp-oF-18s"/>
                                 <include reference="wBF-rY-HkY"/>
+                                <include reference="eVC-Tv-UIE"/>
+                                <include reference="tPO-Gk-HCX"/>
+                                <include reference="w6Q-pn-6ec"/>
                                 <include reference="9fh-lK-UKQ"/>
                                 <include reference="9hm-Px-lFX"/>
                                 <include reference="RuD-Nv-x33"/>
-                                <include reference="Z01-pq-DzL"/>
-                                <include reference="orV-Cq-WLY"/>
-                                <include reference="9A1-Ze-pws"/>
-                                <include reference="lde-a3-2S4"/>
                             </mask>
                         </variation>
                     </view>
