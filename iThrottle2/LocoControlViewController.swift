@@ -65,6 +65,8 @@ class LocoControlViewController: UIViewController,EditLocoViewControllerDelegate
     
     var btnBaseColor:UIColor?
     var originalBarColor:UIColor?
+    var barTintColor:UIColor?
+    var isGoingToedit:Bool=false
     
     
     func styleView(){
@@ -87,7 +89,7 @@ class LocoControlViewController: UIViewController,EditLocoViewControllerDelegate
         self.navigationController!.navigationBar.translucent = true
         self.navigationController!.view.backgroundColor = UIColor.clearColor()
         self.navigationController?.navigationBar.tintColor = imgColors[4]
-        
+        barTintColor = imgColors[4]
         
         let inset = UIEdgeInsets(top: 0,left: 0,bottom: 0,right: 0)
         let backBtnImg = UIImage(named: "backBtn")?.imageWithAlignmentRectInsets(inset)
@@ -184,9 +186,23 @@ class LocoControlViewController: UIViewController,EditLocoViewControllerDelegate
     }
     
     override func viewDidAppear(animated: Bool) {
-        addGradient()
-       
+        super.viewDidAppear(animated)
+        if(!isGoingToedit){
+            addGradient()
+            isGoingToedit=false
+        }
 
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        
+       /* self.navigationController!.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        self.navigationController!.navigationBar.shadowImage = UIImage()
+        self.navigationController!.navigationBar.translucent = true
+        self.navigationController!.view.backgroundColor = UIColor.clearColor()
+        self.navigationController?.navigationBar.tintColor = barTintColor*/
     }
     override func viewDidLayoutSubviews() {
         
@@ -252,12 +268,15 @@ class LocoControlViewController: UIViewController,EditLocoViewControllerDelegate
     }
     
     override func viewWillDisappear(animated: Bool) {
-        timer!.invalidate()
-        self.navigationController?.navigationBar.tintColor = originalBarColor
         
-        self.navigationController!.navigationBar.setBackgroundImage(nil, forBarMetrics: UIBarMetrics.Default)
-        self.navigationController!.navigationBar.shadowImage = nil //UIImage()
-        self.navigationController!.navigationBar.translucent = true
+        timer!.invalidate()
+        if(!isGoingToedit){
+            self.navigationController?.navigationBar.tintColor = originalBarColor
+        
+            self.navigationController!.navigationBar.setBackgroundImage(nil, forBarMetrics: UIBarMetrics.Default)
+            self.navigationController!.navigationBar.shadowImage = nil //UIImage()
+            self.navigationController!.navigationBar.translucent = true
+        }
     }
     
     @IBAction func speedSliderChanged(sender: AnyObject) {
@@ -537,6 +556,7 @@ class LocoControlViewController: UIViewController,EditLocoViewControllerDelegate
         if segue.identifier == "EditLocoSegue" {
             
                 if let destinationVC = segue.destinationViewController as? EditLocoViewController{
+                    isGoingToedit = true
                     destinationVC.loco  = self.loco
                     destinationVC.delegate = self
                 }

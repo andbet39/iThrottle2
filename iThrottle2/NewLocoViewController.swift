@@ -15,7 +15,7 @@ protocol NewLocoViewControllerDelegate{
 }
 
 
-class NewLocoViewController: UIViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate,UITextFieldDelegate {
+class NewLocoViewController: UIViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate,UITextFieldDelegate,UIAlertViewDelegate {
 
     
     
@@ -55,18 +55,21 @@ class NewLocoViewController: UIViewController,UINavigationControllerDelegate, UI
     
     @IBAction func saveLoco(sender: AnyObject) {
         
+        if(self.validatefields()){
         
-        let loco = Loco()
+            let loco = Loco()
         
-        loco.set(nameText.text!, address: Int16(addressText.text!)!, bus: Int16(busText.text!)!, speedMax: Int16(speedText.text!)!, img: "")
-        if(imageView.image != nil){
-            loco.imageData = UIImagePNGRepresentation(imageView.image!);
-        }
+            loco.set(nameText.text!, address: Int16(addressText.text!)!, bus: Int16(busText.text!)!, speedMax: Int16(speedText.text!)!, img: "")
+            if(imageView.image != nil){
+                loco.imageData = UIImagePNGRepresentation(imageView.image!);
+            }
         
-        LocoManager.sharedInstance?.saveLoco(loco)
+            LocoManager.sharedInstance?.saveLoco(loco)
         
-        self.dismissViewControllerAnimated(true) { () -> Void in
-           self.delegate?.didSaveNewLoco(loco)
+            self.dismissViewControllerAnimated(true) { () -> Void in
+                self.delegate?.didSaveNewLoco(loco)
+                }
+        
         }
         
     }
@@ -178,6 +181,48 @@ class NewLocoViewController: UIViewController,UINavigationControllerDelegate, UI
 
     }
     
+    func validatefields() ->Bool{
+    
+        var msg=""
+        if(nameText.text == ""){
+            msg="Name cannot be null."
+        }
+        if(Int(speedText.text!) == nil)
+        {
+            msg="Decoder steps must be a number."
+            
+        }
+     
+        if(Int(busText.text!) == nil)
+        {
+            msg="Bus must be a number."
+            
+        }
+        if(Int(addressText.text!) == nil)
+        {
+            msg="Address must be a number."
+            
+        }
+        
+        if(msg != ""){
+            
+            // Initialize Alert View
+            let alertView = UIAlertView(title: "Alert", message: msg, delegate: self, cancelButtonTitle: "Ok")
+            
+            // Configure Alert View
+            alertView.tag = 1
+            
+            // Show Alert View
+            alertView.show()
+            
+            return false
+        
+        }
+        return true
+    
+    }
+    
+ 
     
     func keyboardWillShow(notification: NSNotification) {
         

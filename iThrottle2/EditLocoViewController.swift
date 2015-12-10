@@ -17,7 +17,7 @@ protocol EditLocoViewControllerDelegate{
     func didDeleteLoco(loco:Loco)
 }
 
-class EditLocoViewController: UIViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate,UITextFieldDelegate  {
+class EditLocoViewController: UIViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate,UITextFieldDelegate,UIAlertViewDelegate  {
     
     var loco:Loco?;
     var delegate:EditLocoViewControllerDelegate?
@@ -44,6 +44,7 @@ class EditLocoViewController: UIViewController,UINavigationControllerDelegate, U
     @IBOutlet weak var cancelBtn: UIBarButtonItem!
     
     
+    @IBOutlet weak var trashNtn: UIButton!
     @IBAction func takePictureBtn(sender: AnyObject) {
         
         
@@ -113,6 +114,11 @@ class EditLocoViewController: UIViewController,UINavigationControllerDelegate, U
         self.cancelBtn.tintColor = imgColors[4]
         self.saveBtn.tintColor = imgColors[4]
         
+        
+        let trashBtnImg = UIImage (named: "trash")?.imageWithRenderingMode(.AlwaysTemplate)
+        self.trashNtn.setImage(trashBtnImg , forState: .Normal)
+        self.trashNtn.tintColor = imgColors[4]
+        
         let picBtnImg = UIImage (named: "pictBtn")?.imageWithRenderingMode(.AlwaysTemplate)
         self.takePicBtn.setImage(picBtnImg , forState: .Normal)
         self.takePicBtn.tintColor = imgColors[4]
@@ -169,35 +175,95 @@ class EditLocoViewController: UIViewController,UINavigationControllerDelegate, U
     }
     
     @IBAction func saveLoco(sender: AnyObject) {
-        let realm = try! Realm()
+        
+        if(validatefields()){
+            let realm = try! Realm()
        
-        try! realm.write {
+            try! realm.write {
          
-            self.loco!.set(self.nameText.text!, address: Int16(self.addressText.text!)!, bus: Int16(self.busText.text!)!, speedMax: Int16(self.speedText.text!)!, img: "")
-            if(self.imageView.image != nil){
-                self.loco!.imageData = UIImagePNGRepresentation(self.imageView.image!);
+                self.loco!.set(self.nameText.text!, address: Int16(self.addressText.text!)!, bus: Int16(self.busText.text!)!, speedMax: Int16(self.speedText.text!)!, img:  "")
+                if(self.imageView.image != nil){
+                    self.loco!.imageData = UIImagePNGRepresentation(self.imageView.image!);
+                }
             }
-        }
         
         
-        //LocoManager.sharedInstance?.updateLoco(loco!)
-      
-        
-        self.dismissViewControllerAnimated(true) { () -> Void in
-              self.delegate?.didUpdateLoco(self.loco!)
+            self.dismissViewControllerAnimated(true) { () -> Void in
+                self.delegate?.didUpdateLoco(self.loco!)
            
+            }
         }
         
     }
     
     
+    func validatefields() ->Bool{
+        
+        var msg=""
+        if(nameText.text == ""){
+            msg="Name cannot be null."
+        }
+        if(Int(speedText.text!) == nil)
+        {
+            msg="Decoder steps must be a number."
+            
+        }
+        
+        if(Int(busText.text!) == nil)
+        {
+            msg="Bus must be a number."
+            
+        }
+        if(Int(addressText.text!) == nil)
+        {
+            msg="Address must be a number."
+            
+        }
+        
+        if(msg != ""){
+            
+            // Initialize Alert View
+            let alertView = UIAlertView(title: "Alert", message: msg, delegate: self, cancelButtonTitle: "Ok")
+            
+            // Configure Alert View
+            alertView.tag = 2
+            
+            // Show Alert View
+            alertView.show()
+            
+            return false
+            
+        }
+        return true
+        
+    }
+
+    
     @IBAction func deleteBtnAction(sender: AnyObject) {
     
+        // Initialize Alert View
+        let alertView = UIAlertView(title: "Alert", message: "Are you sure to delete this loco ?", delegate: self, cancelButtonTitle: "Yes", otherButtonTitles: "No")
         
-        self.dismissViewControllerAnimated(false) { () -> Void in
-            self.delegate?.didDeleteLoco(self.loco!)
-        }
+        // Configure Alert View
+        alertView.tag = 1
+        
+        // Show Alert View
+        alertView.show()
+        
+        
     
+    }
+    
+    func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
+        if alertView.tag == 1 {
+            if buttonIndex == 0 {
+                
+                //Delete the loco
+                self.dismissViewControllerAnimated(false) { () -> Void in
+                    self.delegate?.didDeleteLoco(self.loco!)
+                }
+            }
+        }
     }
     
     func keyboardWillShow(notification: NSNotification) {
