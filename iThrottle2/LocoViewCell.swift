@@ -73,7 +73,7 @@ class LocoViewCell: UITableViewCell {
             
             self.styleView()
             
-            timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "update", userInfo: nil, repeats: true)
+            
         }
     }
    

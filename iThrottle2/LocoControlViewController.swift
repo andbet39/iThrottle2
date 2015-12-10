@@ -528,7 +528,8 @@ class LocoControlViewController: UIViewController,EditLocoViewControllerDelegate
     
     
     @IBAction func editButtonAction(sender: AnyObject) {
-        
+        timer?.invalidate()
+
         self.performSegueWithIdentifier("EditLocoSegue", sender: self)
     }
     
@@ -575,14 +576,14 @@ class LocoControlViewController: UIViewController,EditLocoViewControllerDelegate
         delegate?.didUpdateLoco(loco)
         
         
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: "update", userInfo: nil, repeats: true)
+        //timer = NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: "update", userInfo: nil, repeats: true)
         
 
     }
     
     
     func didDeleteLoco(loco: Loco) {
-        
+            timer?.invalidate()
             self.navigationController?.popToRootViewControllerAnimated(false)
             delegate?.didDeleteLoco(loco)
         

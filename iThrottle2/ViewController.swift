@@ -67,6 +67,10 @@ class ViewController: UITableViewController,NewLocoViewControllerDelegate,LocoCo
         
         if(indexPath.row < locoManager?.locos?.count){
             self.selectedLoco = (locoManager?.locos![indexPath.row])!
+            
+            let cell =    self.locoTableView.cellForRowAtIndexPath(indexPath) as! LocoViewCell
+            cell.timer?.invalidate()
+            
             NSLog("Selected : \((self.selectedLoco?.name)!)")
             self.performSegueWithIdentifier("LocoControlSegue", sender: self)
         }
@@ -96,6 +100,8 @@ class ViewController: UITableViewController,NewLocoViewControllerDelegate,LocoCo
             let loco = locoManager!.locos![indexPath.row]
             cell.locoLabel.text = loco.name
             cell.loco=loco
+            cell.timer = NSTimer.scheduledTimerWithTimeInterval(0.4, target: cell, selector: "update", userInfo: nil, repeats: true)
+
             NSLog(loco.name)
             
             return cell
