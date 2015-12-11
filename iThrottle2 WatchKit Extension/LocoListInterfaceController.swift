@@ -15,29 +15,31 @@ class LocoListInterfaceController: WKInterfaceController {
 
     @IBOutlet var tableView: WKInterfaceTable!
     
-    var locos = [String]()
+    let locoManager = LocoManager.sharedInstance
+    
     
     func setupTable (){
         
-            tableView.setNumberOfRows(locos.count, withRowType: "LocoRow")
+            tableView.setNumberOfRows(locoManager.locos.count, withRowType: "LocoRow")
         
-        for var i = 0; i < locos.count; ++i {
+        for var i = 0; i < locoManager.locos.count; ++i {
             if let row = tableView.rowControllerAtIndex(i) as? LocoRow {
-                row.locoNameLabel.setText(locos[i])
+                row.locoNameLabel.setText(locoManager.locos[i].name)
             }
         }
         
     }
     
     override func table(table: WKInterfaceTable, didSelectRowAtIndex rowIndex: Int) {
-        self.pushControllerWithName("locoControl", context: locos[rowIndex])
+        self.pushControllerWithName("locoControl", context: locoManager.locos[rowIndex])
     }
     
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
-        // Configure interface objects here.
+       
+        
     }
 
     override func willActivate() {
@@ -53,15 +55,19 @@ class LocoListInterfaceController: WKInterfaceController {
             session.sendMessage(request, replyHandler: { reply in
 
                 
-                let names = reply["LocoList"]
+                let locoStr = reply["LocoList"] // name | address | bus
                
-                if (names != nil){
+                if (locoStr != nil){
                     
-                    self.locos.removeAll()
+                    self.locoManager.locos.removeAll()
                     
-                    for object in names as! [String] {
-                        let name = object
-                        self.locos.append(name);
+                    for object in locoStr as! [String] {
+                        let locoArr = object.characters.split{$0 == "|"}.map(String.init)
+                        
+                        let loco:Loco = Loco()
+                        loco.set(locoArr[0], address: Int16(locoArr[1])!, bus: Int16(locoArr[2])!, speedMax: Int16(locoArr[3])!)
+                      
+                        self.locoManager.locos.append(loco);
                     }
                     
                     self.setupTable()

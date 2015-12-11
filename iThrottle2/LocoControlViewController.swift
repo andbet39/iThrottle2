@@ -209,6 +209,16 @@ class LocoControlViewController: UIViewController,EditLocoViewControllerDelegate
         
     }
     
+    @IBAction func emrgencyBtn(sender: AnyObject) {
+        
+        self.loco.direction=2
+        self.loco.speed=0
+        self.speedSlider.value=0
+        
+         SRCP.setLoco(loco)
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -306,7 +316,7 @@ class LocoControlViewController: UIViewController,EditLocoViewControllerDelegate
     @IBAction func dirBtnAction(sender: AnyObject) {
         
         
-        if(loco.direction == 1){
+        if(loco.direction > 0 ){
             loco.direction = 0
             self.dirButton.setTitle("<",forState: UIControlState.Normal)
         }else{

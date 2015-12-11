@@ -13,7 +13,7 @@ import ChameleonFramework
 
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate,WCSessionDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     

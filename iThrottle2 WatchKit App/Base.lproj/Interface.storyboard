@@ -30,12 +30,16 @@
                         </group>
                         <group width="1" alignment="left" id="vvK-Fc-CSF">
                             <items>
-                                <button width="0.5" alignment="left" title="DIR" id="YhJ-15-Xm9">
+                                <button width="0.5" alignment="left" title="&gt;" id="YhJ-15-Xm9">
                                     <connections>
-                                        <action selector="directionButtonAction" destination="AgC-eL-Hgc" id="UNs-5Z-LX9"/>
+                                        <action selector="dirButtonAction" destination="AgC-eL-Hgc" id="oRc-jr-2i5"/>
                                     </connections>
                                 </button>
-                                <button width="0.5" alignment="left" title="F0" id="aaU-CS-GwQ"/>
+                                <button width="0.5" alignment="left" title="F0" id="aaU-CS-GwQ">
+                                    <connections>
+                                        <action selector="fbuttonAction" destination="AgC-eL-Hgc" id="Vcc-ep-04m"/>
+                                    </connections>
+                                </button>
                             </items>
                         </group>
                         <group width="1" alignment="left" layout="vertical" id="pfQ-Js-pwn">
@@ -50,6 +54,10 @@
                         </group>
                     </items>
                     <connections>
+                        <outlet property="addressLabel" destination="Pa7-CR-Kbc" id="IS4-yt-PaE"/>
+                        <outlet property="dirButton" destination="YhJ-15-Xm9" id="v8d-lH-CIa"/>
+                        <outlet property="fbutton" destination="aaU-CS-GwQ" id="lHu-03-7OY"/>
+                        <outlet property="nameLabel" destination="isk-XZ-d8E" id="Rjo-rs-8lO"/>
                         <outlet property="speedPicker" destination="XLd-Or-jVU" id="nip-wX-osU"/>
                     </connections>
                 </controller>
@@ -84,29 +92,6 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="279" y="347"/>
-        </scene>
-        <!--Static Notification Interface Controller-->
-        <scene sceneID="AEw-b0-oYE">
-            <objects>
-                <notificationController id="YCC-NB-fut">
-                    <items>
-                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
-                    </items>
-                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
-                    <connections>
-                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
-                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
-                    </connections>
-                </notificationController>
-            </objects>
-            <point key="canvasLocation" x="220" y="643"/>
-        </scene>
-        <!--Notification Controller-->
-        <scene sceneID="ZPc-GJ-vnh">
-            <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="iThrottle2_WatchKit_App" customModuleProvider="target"/>
-            </objects>
-            <point key="canvasLocation" x="468" y="643"/>
         </scene>
     </scenes>
 </document>

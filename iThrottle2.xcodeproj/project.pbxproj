@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7100E2F85DD5930E5519A88F /* Pods_iThrottle2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B397A3EE84133BB5820965D /* Pods_iThrottle2.framework */; };
 		B522891A1C18BC0B00ACF99A /* EditLocoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52289191C18BC0B00ACF99A /* EditLocoViewController.swift */; };
+		B522891C1C1A28B200ACF99A /* Loco.swift in Sources */ = {isa = PBXBuildFile; fileRef = B522891B1C1A28B200ACF99A /* Loco.swift */; };
+		B522891E1C1A2B1500ACF99A /* LocoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B522891D1C1A2B1500ACF99A /* LocoManager.swift */; };
 		B52651D31C12D03C00890365 /* ysocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52651D01C12D03C00890365 /* ysocket.swift */; };
 		B52651D41C12D03C00890365 /* ytcpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = B52651D11C12D03C00890365 /* ytcpsocket.c */; };
 		B52651D51C12D03C00890365 /* ytcpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52651D21C12D03C00890365 /* ytcpsocket.swift */; };
@@ -143,6 +145,8 @@
 		47A3346ACB7F87228E693DFC /* Pods-iThrottle2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iThrottle2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iThrottle2/Pods-iThrottle2.debug.xcconfig"; sourceTree = "<group>"; };
 		54DAECE9F155C290B5D0FC2D /* Pods-iThrottle2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iThrottle2.release.xcconfig"; path = "Pods/Target Support Files/Pods-iThrottle2/Pods-iThrottle2.release.xcconfig"; sourceTree = "<group>"; };
 		B52289191C18BC0B00ACF99A /* EditLocoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditLocoViewController.swift; sourceTree = "<group>"; };
+		B522891B1C1A28B200ACF99A /* Loco.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loco.swift; sourceTree = "<group>"; };
+		B522891D1C1A2B1500ACF99A /* LocoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocoManager.swift; sourceTree = "<group>"; };
 		B52651CF1C12D03B00890365 /* iThrottle2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iThrottle2-Bridging-Header.h"; sourceTree = "<group>"; };
 		B52651D01C12D03C00890365 /* ysocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ysocket.swift; sourceTree = "<group>"; };
 		B52651D11C12D03C00890365 /* ytcpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ytcpsocket.c; sourceTree = "<group>"; };
@@ -387,6 +391,8 @@
 		B55706C41C0DB6A000981258 /* iThrottle2 WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				B522891D1C1A2B1500ACF99A /* LocoManager.swift */,
+				B522891B1C1A28B200ACF99A /* Loco.swift */,
 				B55706E91C0DDC8C00981258 /* LocoRow.swift */,
 				B55706EB1C0DDD4E00981258 /* LocoListInterfaceController.swift */,
 				B55706E31C0DB6E300981258 /* LocoInterfaceController.swift */,
@@ -789,7 +795,9 @@
 				B55706EA1C0DDC8C00981258 /* LocoRow.swift in Sources */,
 				B55706CA1C0DB6A000981258 /* ExtensionDelegate.swift in Sources */,
 				B55706E51C0DB88700981258 /* LocoInterfaceController.swift in Sources */,
+				B522891E1C1A2B1500ACF99A /* LocoManager.swift in Sources */,
 				B55706EC1C0DDD4E00981258 /* LocoListInterfaceController.swift in Sources */,
+				B522891C1C1A28B200ACF99A /* Loco.swift in Sources */,
 				B55706C81C0DB6A000981258 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

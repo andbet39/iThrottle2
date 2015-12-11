@@ -14,10 +14,52 @@ class LocoInterfaceController: WKInterfaceController {
 
     @IBOutlet var speedPicker: WKInterfacePicker!
     
+    @IBOutlet var nameLabel: WKInterfaceLabel!
     var speed: Int = 0
-    
+    var loco:Loco?
   
+    @IBOutlet var addressLabel: WKInterfaceLabel!
     
+    @IBOutlet var dirButton: WKInterfaceButton!
+    @IBAction func dirButtonAction() {
+        
+        if(self.loco?.direction == 0)
+        {
+            self.loco?.direction = 1
+            
+        }else{
+            self.loco?.direction = 0
+        }
+        
+        
+        if(loco?.direction == 0){
+            self.dirButton .setTitle("<")
+        }else{
+            self.dirButton.setTitle(">")
+            
+        }
+         LocoManager.sharedInstance.sendLocoUpdate(self.loco!)
+    }
+    
+    @IBAction func fbuttonAction() {
+        
+        if(self.loco!.f[0] == false){
+            self.loco!.f[0] = true
+        }else{
+             self.loco!.f[0] = false
+        }
+        
+        
+        if(self.loco!.f[0] == false){
+            self.fbutton.setBackgroundColor(UIColor.lightGrayColor())
+        }else{
+            self.fbutton.setBackgroundColor(UIColor.darkGrayColor())
+        }
+         LocoManager.sharedInstance.sendLocoUpdate(self.loco!)
+    }
+    
+    
+    @IBOutlet var fbutton: WKInterfaceButton!
     @IBAction func emergencyButtonAction() {
         
         speedPicker.setSelectedItemIndex(0)
@@ -27,32 +69,34 @@ class LocoInterfaceController: WKInterfaceController {
     @IBAction func speedChangedAction(value: Int) {
         
         speed = value
+        self.loco?.speed=Int16(speed)
         
-        if WCSession.defaultSession().reachable == true {
-            
-            let dictionary = ["command":"CHANGE_SPEED_FOR_LOC"]
-            
-            let session = WCSession.defaultSession()
-            
-            session.sendMessage(dictionary, replyHandler: { reply in
-                
-                print("ok")
-                
-                }, errorHandler: { error in
-                    print("error: \(error)")
-            })
-        }
+        LocoManager.sharedInstance.sendLocoUpdate(self.loco!)
 
     }
     
     
-    @IBAction func directionButtonAction() {
-        
-            }
+    
     
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
+
+        self.loco  = context as! Loco
+        
+        self.addressLabel.setText("ID: \(loco!.address)")
+        self.nameLabel.setText("\(loco!.name)")
+        
+        var speedItems:[WKPickerItem]=Array()
+        
+        for (var i=0;i < Int((loco?.speedMax)!);i++)
+        {
+            let pickerItem = WKPickerItem()
+            pickerItem.title = "SPEED \(i)"
+            
+            speedItems.append(pickerItem)
+        }
+        speedPicker.setItems(speedItems)
         
     }
 
@@ -60,13 +104,7 @@ class LocoInterfaceController: WKInterfaceController {
         super.willActivate()
         
         
-        let speedItems: [WKPickerItem] = (0...128).map {
-            let pickerItem = WKPickerItem()
-            pickerItem.title = "SPEED \($0)"
-                
-            return pickerItem
-        }
-        speedPicker.setItems(speedItems)
+        
     }
 
     override func didDeactivate() {

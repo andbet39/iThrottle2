@@ -30,10 +30,15 @@ class LocoManager {
     func getLocoList() ->[String]{
         
         var lista = [String]()
+        let realm = try! Realm()
         
-        for loco in self.locos!
+        let dbloco = realm.objects(Loco)
+
+        
+        for loco in dbloco
         {
-            lista.append(loco.name)
+            let strLoco = "\(loco.name)|\(loco.address)|\(loco.bus)|\(loco.speedMax)"
+            lista.append(strLoco)
         }
         
         return lista
