@@ -575,6 +575,7 @@
 				TargetAttributes = {
 					B55706881C0DB69F00981258 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = R8Y294JXA8;
 					};
 					B557069C1C0DB6A000981258 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -1010,8 +1011,9 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = iThrottle2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.atdevapps.iThrottle2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.atdevapps.ithrottle2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "iThrottle2/iThrottle2-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1026,8 +1028,9 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = iThrottle2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.atdevapps.iThrottle2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.atdevapps.ithrottle2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "iThrottle2/iThrottle2-Bridging-Header.h";
 			};
